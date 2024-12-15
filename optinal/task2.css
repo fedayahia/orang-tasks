@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(255, 255, 134);
+    display: flex; 
+            justify-content: center; 
+            align-items: center;
+
+}
+div{
+    background-color: white;
+    border: 1px solid black none;
+    border-radius: 80px;
+    margin:30px;
+    width: 550px;
+    font-weight: bold; 
+    font-size: 15px;
+    gap:15px
+}
+img{
+   padding: 5px;
+    height: 80px;
+}
+

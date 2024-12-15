@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.flowgrid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+.flowgrid>div{
+    background-color: yellow;
+    border: 1px solid black none;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+   text-align:center;
+   padding: 30px;
+  
+}
+    </style>
+</head>
+<body>
+   <h4> what do you think?</h4> 
+   <div class="flowgrid" style="grid-auto-flow: row dense">
+   <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  
+
+   </div>
+</body>
+</html>

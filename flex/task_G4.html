@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    background-color: rgb(173, 200, 140);
+    justify-content: center; 
+    align-items: center; 
+    
+}
+.clacalculator{
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(172, 197, 237);
+    display: grid;
+    gap: 1px;
+    padding: 1px;
+    grid-template-columns:repeat(4,1fr) ;
+    grid-template-rows: repeat(5,1fr) ;
+}
+
+.clacalculator>div{
+    margin: 10px;
+font-size: 20px;
+padding: 10px;
+
+height: 40px;
+text-align: center;
+}
+.item1{
+  grid-column: 1/5;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  border: solid black none;
+}
+    </style>
+</head>
+<body>
+   <div class="clacalculator">
+     
+    <div class="item1" style="background-color: aliceblue;"></div>
+    <div class="item2" style="background-color: aliceblue;box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">1</div>
+    <div class="item3" style="background-color: aliceblue;box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">2</div>
+    <div class="item3" style="background-color: aliceblue;box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">3</div>
+    <div class="item4" style="background-color: rgb(246, 246, 162);box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">+</div>
+    <div class="item5" style="background-color: aliceblue;box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">4</div>
+    <div class="item6" style="background-color: aliceblue;box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">5</div>
+    <div class="item7" style="background-color: aliceblue;box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);" >6</div>
+    <div class="item8" style="background-color: rgb(246, 246, 162);box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">-</div>
+    <div class="item10"style="background-color:aliceblue;box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">7</div>
+    <div class="item2" style="background-color:aliceblue;box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">8</div>
+    <div class="item3"style="background-color:aliceblue;box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">9</div>
+    <div class="item4" style="background-color: rgb(246, 246, 162);box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">*</div>
+    <div class="item5" style="background-color: rgb(239, 142, 142);box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">c</div>
+    <div class="item6" style="background-color: aliceblue;box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">0</div>
+    <div class="item7" style="background-color: aliceblue;box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">=</div>
+    <div class="item8" style="background-color: rgb(246, 246, 162);box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">/</div>
+    </div>
+</body>
+</html>
