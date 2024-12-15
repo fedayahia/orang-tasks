@@ -1,48 +1,72 @@
+html,body{
+margin:0;
+height: 100%;
+  
+}
 body{
-  background-image: url(back.jpg);
-  text-align: right;
-  color: white;
-  
-}
-.bod{
     display: flex;
-    gap:5px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
-.row{
-    text-align: center;
-    width: 1600px;
-    height: 700px;
+.sidebar{
+    display: flex;
+   flex-direction: column;
+   width: 20vw;
+   height: 100vh;
     background-color: rgb(27, 27, 73);
-display: flex;
-justify-content: space-around;
-gap:10px
-
-
 }
 
-.con1{
-    background-color: rgb(58, 58, 106);
-    height: 500px;
-    width: 350px;
-    font-size: 20px;
-    line-height: 4;
-    font-size: 26PX;
-    padding: 30px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+.sidebar div:nth-child(n+1) {
+    color: gray;
+    padding: 1.3vw 1vw 1.3vw 2vw;
 }
-.navb{
+.sidebar div:nth-child(n+2){
     display: flex;
-    gap: 650px;
-  
+    gap: 1vw;
+    font-size: 1.5vw;
+    padding-left: 2.2vw;
 }
-.con2{
-    display: flex; 
-    flex-direction:column;
-    gap:50px;
- 
+.sidebar div:first-child{
+    color: white;
+    font-weight: bold;
+    font-size: 2.8vw;}
+i{height: 1cap; padding-top: 0.1vh;}
+
+.sidebar div:nth-child(n+2):hover{
+    color: white;
+    background-color: #1B203D;
+  }
+
+  .dashboard{
+    display: flex;
+    flex-direction: column;
+    width: 78vw;
+    padding: 1.3vw 1vw 1.3vw 1vw;
+    background-color: #1B203D;
+    
 }
+
+
+.prof{
+display: flex;
+color: white;
+justify-content: space-between;
+padding-left: 2vw;
+}
+.prof div:nth-child(1){
+    font-size: 2.5vw;
+    display: flex;
+    gap: 1vw;}
+
+.prof div:last-child {
+        display: flex;
+        align-items: center;
+}
+
+
 .list{
     flex-basis: 220px;
     font-size: 35px;
