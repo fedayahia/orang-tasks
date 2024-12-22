@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+      display: flex; /* ترتيب العناصر أفقياً */
+      align-items: center; /* محاذاة العناصر عمودياً */
+    }
+
+        ul {
+          
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #f5f2f2;
+        }
+        
+        .left>li {
+          float: left;
+          border-right:1px solid #d0cece;
+          
+        }
+        
+        li:last-child {
+          border-right: none;
+        }
+        
+        li a {
+          display: block;
+          color: rgb(106, 106, 106);
+          text-align: center;
+          padding: 14px 16px;
+         
+          text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+          background-color: #111;
+        }
+  
+        .nav2 {
+  display: flex; 
+  justify-content: center; 
+  margin-left: 30%;
+  gap: 120px; 
+  padding: 20px;
+        }
+.nav2 div {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.nav2 a {
+  text-decoration: none; 
+  font-size: 16px; 
+  color: black; 
+}
+
+ /* Container for the dropdown and button */
+ .container {
+      display: flex; /* ترتيب العناصر أفقياً */
+      align-items: center; /* محاذاة العناصر عمودياً */
+    }
+
+    /* Style The Dropdown Button */
+    .dropbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%; /* يجعل الزر يملأ الصندوق */
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: relative;
+      width: 20%; 
+      margin-left: 170px;
+      
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      width: 90%; /* الصندوق يتبع عرض .dropdown */
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      text-align: center;
+      padding: 10px; /* حشوات إضافية */
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 16px 20px;
+      text-decoration: none;
+      display: block;
+      font-size: 18px;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+    }
+
+    /* Style for the Button */
+    .button1{
+      font-weight: bold;
+    background-color: white;
+      color: rgb(0, 0, 0);
+      padding: 16px 60px;
+      font-size: 20px;
+      text-align: left;
+      border: 1px solid rgb(172, 170, 170);
+      margin-left: 30px; /* مسافة بين الزر وصندوق الـ Dropdown */
+    }
+    input{
+        font-size: 20px;
+        padding: 15px 60px;
+        text-align: left; 
+    }
+
+    button {
+  background-color: #3e8e41;
+  border: none;
+  color: white;
+  padding: 17px 20px;
+  display: inline-block;
+  font-size: 20px;
+}
+/* img */
+.bacimg{
+    background-image: url(banner.jpg);
+    margin-left: 530px;
+    width: 900px;
+    margin-top:30px;
+    height: 500px;
+    font-size: 25PX;
+}
+.bacimg>p{
+    padding-top: 90px;
+    margin: 50px;
+
+}
+/* gimg */
+
+div.gallery {
+  border: 1px solid #ccc;
+  width: 300px;
+  height: 200px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+        
+        </style>
+        </head>
+        <body>
+        <nav>
+        <ul>
+            <div class="left">
+          <li ><a class="active" href="#home"  style="margin-left: 150px;" >hello@colorlib.com</a></li>
+          <li><a href="#news">free shipping for all order of $99</a></li>
+         
+        </div>
+        <li style="float:right"></li>
+        <li style="float:right"></li>
+        <li style="float:right"></li>
+        <li style="float:right"></li>
+          <li style="float:right"><a href="#about">english</a></li>
+          <li style="float:right"><a href="#about">login</a></li>
+        </ul>
+    </nav>
+    
+        <div class="nav2">
+        <div><a href="#home">Home</a></div>
+        <div><a href="#news">News</a></div>
+        <div><a href="#contact">Contact</a></div>
+        <div><a href="#about">About</a></div>
+        <div class="nav2 left">
+        <div style="float:right"></div>
+        <div style="float:right"></div>
+        <div style="float:right"></div>
+    </div>
+    </div>
+   <div class="coldrop" style="display: flex;flex-direction: row;  align-items: center;justify-content: flex-start;">
+    <div class="dropdown">
+        
+        <button class="dropbtn"><i></i>all departments</button>
+        <div class="dropdown-content">
+          <a href="#">Freash meat</a>
+          <a href="#">vegetables</a>
+          <a href="#">fruitb & nut gifts</a>
+          <a href="#">freash berries</a>
+          <a href="#">ocean foods</a>
+          <a href="#">butter& eggs</a>
+          <a href="#">fastfood</a>
+          <a href="#">freash onion</a>
+          <a href="#">papayaya & crisps</a>
+          <a href="#">freash bananas</a>
+          <a href="#">oatmeal</a>
+        </div>
+      </div>
+
+      <div><button class="button1">all categories<i></i></button></div>
+        <div> <input type="text"  value="what do you need?"> </div>
+        <button>search</button></div>
+   </div>
+   <div class="bacimg">
+    <p ><span style="color: #3e8e41;" >fruitb FRESH</span>
+        <br> <br>
+     <span style="font-size: 40px;font-weight: bold;">Vegetable<BR>
+        100% Organic</span><br>
+    <span style="font-size: 15px;color: #9b9999;">Free Pickup and Delivery Avalable</span>
+    <br><br>
+    <button style="font-weight: bold;" >shop now</button>
+</div>
+</P>
+<!-- galleryimg -->
+<div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="cat-1.jpg">
+        <img src="cat-1.jpg" alt="Cinque Terre" width="600" height="400">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+  </div>
+  
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="cat-2.jpg">
+        <img src="cat-2.jpg" alt="Forest" width="600" height="400">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="cat-3.jpg">
+        <img src="cat-3.jpg" alt="Northern Lights" width="600" height="400">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="cat-4.jpg">
+        <img src="cat-4.jpg" alt="Mountains" width="600" height="400">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+  </div>
+     
+   
+        </body>
+
+        </html>
+        

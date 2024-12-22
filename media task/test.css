@@ -1,0 +1,255 @@
+.container {
+    display: flex; /* ترتيب العناصر أفقياً */
+    align-items: center; /* محاذاة العناصر عمودياً */
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #f5f2f2;
+}
+.fa {
+font-size: 48px;  /* تغيير حجم الأيقونة */
+color: #4CAF50;   /* تغيير اللون */
+}
+
+.left > li {
+    float: left;
+    border-right: 1px solid #d0cece;
+}
+li{
+    padding:5px;
+}
+li i{
+    padding: 14px 16px;
+    display: block;
+    text-align: center;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    text-decoration: none;
+    display: block;
+    color: rgb(106, 106, 106);
+    text-align: center;
+
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.nav2 {
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
+    gap: 120px;
+    padding: 20px;
+}
+
+.nav2 div {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.nav2 a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+    width: 20%;
+    margin-left: 170px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 90%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 16px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.button1 {
+    font-weight: bold;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    padding: 16px 60px;
+    font-size: 20px;
+    text-align: left;
+    border: 1px solid rgb(172, 170, 170);
+    margin-left: 30px;
+}
+
+input {
+    font-size: 20px;
+    padding: 15px 60px;
+    text-align: left;
+}
+
+button {
+    background-color: #3e8e41;
+    border: none;
+    color: white;
+    padding: 17px 20px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.bacimg {
+    background-image: url(banner.jpg);
+    margin-left: 530px;
+    width: 900px;
+    margin-top: 30px;
+    height: 500px;
+    font-size: 25px;
+}
+
+.bacimg > p {
+    padding-top: 90px;
+    margin: 50px;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+    width: 300px;
+    height: 200px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .nav2 {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .dropdown {
+        width: 40%;
+    }
+
+    .button1, input, button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .bacimg {
+        margin: 10px auto;
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nav2 {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .dropdown {
+        width: 60%;
+    }
+
+    .gallery {
+        width: 100%;
+    }
+
+    .responsive {
+        width: 100%;
+    }
+
+    .button1, input, button {
+        width: 90%;
+        margin: 5px auto;
+        text-align: center;
+    }
+
+    .bacimg {
+        height: auto;
+    }
+
+    .dropdown-content {
+        width: 100%;
+    }
+}
