@@ -8,7 +8,9 @@
 }
 html, body {
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden
+        scroll-behavior: smooth;
+    
 }
 
 
@@ -17,13 +19,9 @@ html, body {
     color: rgb(76, 51, 99);
     font-family: 'Pacifico', cursive;
     font-weight: 900;
-    width: 10%;
-
 }
-/* .logo a{
-    font-size: 7em;
- font-weight: 900;
-} */
+
+
 
 header{
     background-color:white;
@@ -33,16 +31,16 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 10px 50px;
-   
+
+  
 }
 header a{
     text-decoration: none;
     color: black;
-    font-size: 1,1em;
+    font-size: 2,1em;
     font-weight: 500;
     padding-left: 30px;
 }
-
 
 header a:hover{
 color: rgb(198, 156, 215) ;
@@ -133,8 +131,9 @@ transition: 0.7s ease;
 .content{
  display: flex;
  justify-content: center;
- flex-direction: row;
+ flex-direction: ROW;
 flex-wrap: wrap;
+z-index: 999;
 }
 .card{
     background-color: white;
@@ -167,6 +166,8 @@ text-align: center;
 }
 .mywork{
     padding: 50px 70px;
+    box-sizing: border-box;
+    width: 100%;
 }
 .title2{
     display: flex;
@@ -193,6 +194,8 @@ text-align: center;
     border-radius: 10px;
     display: block;
     transition: 0.9s ease;
+        height: auto;
+    
  
 }
 .layer{
@@ -325,6 +328,7 @@ text-align: center;
     color: white;
     padding: 2em;
     width: 100%;
+    text-align: center;
 
 }
 .fospan{
@@ -335,52 +339,71 @@ color:rgb(198, 156, 215);
         text-decoration: none;
         color: white;
         font-weight: 500;
-     
+       
         padding: 0 16px 0 0;
    
 }
 @media (max-width:600px){
-    header{
-        padding:6px 6px;
+        .listwork {
+            grid-template-columns: auto; 
+        }
+        .card {
+            margin: 5px;
+            padding: 4px;
 
+        }
+    
+    header{
+        padding:4px 4px;
+ 
+    }
+    .navig{
+     
     }
     .navig a{
-        padding-left: 5px;
+        padding-right: 10px;
+        font-size: 8px;
+     
     }
     .title{
-        font-size: .8em;
+        font-size: 1em;
     }
-    .main{
+    .title2{
+        font-size: 1em;
+    }
+    /* .main{
         margin: 0;
         display: flex;
         flex-direction: column;
       text-align: center;
       align-items: center;
        
-    }
+    } */
    .main input::placeholder {
-        font-size: 10px;}
+    font-size: 10px;}
    .main .button{
-    font-size:10px;
+    font-size:8px;
    }
     .main p{
-        font-size:10px;
+        font-size:7px;
         padding: 2px;
         margin: 0%;
     }
-    .main h4{
+    /* .main h4{
         padding: 5px;
         margin-top:  35px;
         font-size: 1em;
-    }
+    } */
     .main .images img{
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
+        padding-left: 15px;
     }
     .mywork{
     
-        display: flex;
-       margin-top:680px;
+        display: grid;
+        grid-template-rows: auto;
+      
 
     }
     .contact1 form input {
@@ -395,6 +418,53 @@ color:rgb(198, 156, 215);
     width: 100%;
     height: 100px;}
   
+    .main {
+        padding: 20px;
+    }
+    .main h4 {
+        font-size: 1.2em;
+    }
+    .main .button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+  
 }
     
    
+@media (max-width: 600px) {
+    .main {
+        display: flex;
+        flex-direction:column;
+        align-items: left ; /* لتوسيط العناصر أفقياً */
+    }
+
+    .images {
+        width: 40%; /* اجعل الصورة تأخذ عرضاً كاملاً */
+        height: auto;
+        margin-bottom: 20px; /* أضف مسافة بين الصورة والنص */
+        left :70%
+    }
+
+    .mainp {
+        width: 80%; /* اجعل النص يأخذ عرضاً كاملاً */
+        padding: 10px; /* أضف بعض التباعد الداخلي */
+        font-size: 15px;
+        margin-top: 25px;
+    }
+  .card{
+    width: 22.25em;
+    font-size: .8em;
+    
+  
+  }
+
+
+.mywork{
+    margin-top: 380px;
+}
+
+.card:hover{
+    transform: scale(.8);
+}
+}
