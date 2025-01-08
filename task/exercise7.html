@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #7</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .ii {
+            width: 300px;
+            height: auto;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        .falg {
+            width: 150px;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const ss = document.getElementById("flag");
+            const im = document.getElementById("im");
+
+            function cha() {
+                if (ss.value === "UK") {
+                    im.src = "OIP.jpg"; 
+                } else if (ss.value === "Norway") {
+                    im.src = "OIP (1).jpg"; 
+                } else if (ss.value === "canada") {
+                    im.src = "canada.png"; 
+                } 
+            }
+
+            ss.addEventListener("change", cha);
+
+           
+            cha();
+        });
+    </script>
+</head>
+<body>
+    <select class="falg" id="flag">
+        <option value="UK" selected>UK</option>
+        <option value="Norway">Norway</option>
+        <option value="canada">Canada</option>
+    </select>
+    <img id="im" class="ii" src="default.png" alt="Country Flag">
+</body>
+</html>

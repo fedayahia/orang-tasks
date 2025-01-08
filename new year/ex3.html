@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color:red">happy new year</h1>
+    <p id="countdown">1:00</p>
+    <script>
+        const statm = 1;
+        let time = statm * 60 ;
+  const cd = document.getElementById("countdown");
+  setInterval (Countdown,1000)
+  function Countdown (){
+    const minut = Math.floor (time/60);
+    let sec = time % 60;
+    sec = sec <1 ? '0' + sec:sec ;
+    cd.innerHTML = ` ${minut}:${sec}`
+    if (time > 0) {
+            time--;
+        } else {
+            clearInterval(Countdown); 
+        }
+  
+  }
+    </script>
+</body>
+</html>

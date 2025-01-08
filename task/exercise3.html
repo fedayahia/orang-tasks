@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #4: Formatting text</title>
+    <style>
+        div {
+            width: 600px;
+            height: 100px;
+            border: 1px solid black;
+            margin-top: 10px;
+            /* default options */
+            font-family: Arial;
+            font-size: 12pt;
+        }
+    </style>
+</head>
+<body>
+<form name="form">
+    <select name="font_family" id="font_family">
+        <option value="Arial" selected>Arial</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Courier New">Courier New</option>
+    </select>
+    <select name="font_size" id="font_size">
+        <option value="8pt">8pt</option>
+        <option value="10pt">10pt</option>
+        <option value="12pt" selected>12pt</option>
+        <option value="14pt">14pt</option>
+        <option value="16pt">16pt</option>
+    </select>
+    <label>Italic <input type="checkbox" name="font_italic" id="font_italic"></label>
+    <label>Bold <input type="checkbox" name="font_bold" id="font_bold"></label>
+    <label>Underline <input type="checkbox" name="font_underline" id="font_underline"></label>
+</form>
+
+<div id="text">The quick brown fox jumps over the lazy dog</div>
+<script>
+   function updateFontFamily() {
+    const selectedValue = document.getElementById("font_family").value; 
+    const text = document.getElementById("text");
+
+    if (selectedValue === "Arial") {
+        text.style.fontFamily = "Arial";
+    } else if (selectedValue === "Verdana") {
+        text.style.fontFamily = "Verdana";
+    } else if (selectedValue === "Helvetica") {
+        text.style.fontFamily = "Helvetica";
+    } else if (selectedValue === "Times New Roman") {
+        text.style.fontFamily = "Times New Roman";
+    } else if (selectedValue === "Courier New") {
+        text.style.fontFamily = "Courier New";
+    }
+}
+document.getElementById("font_family").addEventListener("change", updateFontFamily);
+
+function updatesizeFamily (){
+    const selectedValue = document.getElementById("font_size").value; 
+    const text = document.getElementById("text");
+    if (selectedValue === "8pt") {
+        text.style.fontSize = "8pt";
+    } else if (selectedValue === "10pt") {
+        text.style.fontSize = "10pt";
+    } else if (selectedValue === "12pt") {
+        text.style.fontSize = "12pt";
+    } else if (selectedValue === "14pt") {
+        text.style.fontSize = "14pt";
+    } else if (selectedValue === "16pt") {
+        text.style.fontSize = "16pt";
+    }
+}
+document.getElementById("font_size").addEventListener("change", updatesizeFamily);
+
+function italic(){
+  const isitalic =document.getElementById("font_italic");
+    const text = document.getElementById("text");
+    if ( isitalic.checked){
+        text.style.fontStyle = "italic";
+    }
+    else{
+        text.style.fontStyle = "normal";  
+    }
+}
+document.getElementById("font_italic").addEventListener("change", italic);
+
+function bold(){
+  const isbold =document.getElementById("font_bold");
+    const text = document.getElementById("text");
+    if ( isbold.checked){
+        text.style.fontWeight = "bold";
+    }
+
+    else {
+                text.style.fontWeight = "normal"; 
+            }
+            }
+
+
+            document.getElementById("font_bold").addEventListener("change", bold);
+
+
+function underline(){
+  const ischecked =document.getElementById("font_underline").checked;
+    const text = document.getElementById("text");
+    if (ischecked){
+        text.style.textDecoration = "underline";
+    }
+    else {
+        text.style.textDecoration = "none";
+            }
+    
+}
+document.getElementById("font_underline").addEventListener("change", underline);
+
+
+
+</script>
+</body>
+</html>

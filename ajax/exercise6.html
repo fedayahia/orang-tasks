@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #6: Simple Playlist</title>
+    <script>
+        // وظيفة لإضافة تعليق إلى القائمة
+        function add() {
+            const input = document.getElementById("Input").value.trim();
+            const listNode = document.getElementById("playlist");
+
+            if (input) {
+                const liNode = document.createElement("li");
+                liNode.textContent = input;
+
+                // إرسال التعليق إلى الخادم باستخدام AJAX
+                const xhr = new XMLHttpRequest();
+                xhr.open("POST", "https://jsonplaceholder.typicode.com/comments", true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 201) {
+                        // يمكن هنا إضافة أي عملية بعد إرسال التعليق (مثل الإبلاغ عن النجاح)
+                        console.log("تم إرسال التعليق بنجاح");
+                    }
+                };
+
+                // إرسال بيانات التعليق إلى الخادم
+                const data = JSON.stringify({ body: input });
+                xhr.send(data);
+
+                // إضافة التعليق إلى الصفحة مباشرة في الـ UL
+                listNode.appendChild(liNode);
+
+                // تفريغ الحقل النصي بعد الإضافة
+                document.getElementById("Input").value = "";
+
+                // إزالة النص في الـ livePreview بعد إضافة التعليق
+                document.getElementById("livePreview").textContent = "";
+            }
+        }
+
+        // وظيفة لعرض النص أثناء الكتابة في الصفحة
+        function livePreview(value) {
+            const preview = document.getElementById("livePreview");
+            preview.textContent = value;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const addButton = document.getElementById("addButton");
+            addButton.addEventListener("click", add); // ربط الزر مع وظيفة الإضافة
+
+            // ربط حدث الكتابة داخل الحقل مع عرض النص مباشرة
+            document.getElementById("Input").addEventListener("input", function(event) {
+                livePreview(event.target.value);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<h1>AJAX Request with JavaScript</h1>
+<form>
+    <input type="text" id="Input" size="40" placeholder="java script" />
+    <input type="button" id="addButton" value="send">
+    <h1>Get comment:</h1>
+</form>
+
+<!-- سيتم إضافة التعليقات هنا -->
+<ul id="playlist"></ul>
+
+<!-- هنا سيتم عرض النص أثناء الكتابة -->
+
+<div id="livePreview" ></div>
+
+</body>
+</html>

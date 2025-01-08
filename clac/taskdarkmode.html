@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark / Light Mode</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .default-mode {
+            background-color: #007bff;
+            color: white;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .light-btn {
+            background-color: white;
+            color: black;
+        }
+
+        .dark-btn {
+            background-color: black;
+            color: white;
+        }
+
+        .default-btn {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body class="default-mode">
+
+    <h1>Choose Your Mode</h1>
+    <button class="default-btn" onclick="setMode('default')">Default (Blue)</button>
+    <button class="light-btn" onclick="setMode('light')">Light Mode</button>
+    <button class="dark-btn" onclick="setMode('dark')">Dark Mode</button>
+
+    <script>
+        function setMode(mode) {
+            let body = document.body;
+            body.classList.remove("light-mode", "dark-mode", "default-mode");
+
+            if (mode === "light") {
+                body.classList.add("light-mode");
+            } else if (mode === "dark") {
+                body.classList.add("dark-mode");
+            } else {
+                body.classList.add("default-mode");
+            }
+
+            sessionStorage.setItem("theme", mode);
+        }
+
+    
+        window.onload = function() {
+            let savedMode = sessionStorage.getItem("theme") || "default";
+            setMode(savedMode);
+        };
+    </script>
+
+</body>
+</html>

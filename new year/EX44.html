@@ -1,0 +1,86 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        #search {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px;
+  background-repeat: no-repeat; 
+  width: 100%; 
+  font-size: 16px; 
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; 
+  margin-bottom: 12px; 
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+        </style>
+    </head>
+    <body>
+          <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names..">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Country</th>
+    <th style="width:40%;">Capital</th>
+  </tr>
+  <tr>
+    <td>Jordan</td>
+    <td>Amman</td>
+  </tr>
+  <tr>
+    <td>Saudi Arabia</td>
+    <td>Riyadh</td>
+  </tr>
+  <tr>
+    <td> Palestine</td>
+    <td>Jerusalem</td>
+  </tr>
+  <tr>
+    <td>Syria</td>
+    <td>Damascus</td>
+  </tr>
+</table>
+
+
+<script>
+  
+    function  myFunction(){
+        const input = document.getElementById("search");
+         const filter = input.value.toUpperCase();
+         const table = document.getElementById("myTable");
+           const tr = table.getElementsByTagName("tr");
+          for (let i = 1; i < tr.length; i++) {
+           const td = tr[i].getElementsByTagName("td")[0];
+            if (td){
+                 const txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                 } else {
+                  tr[i].style.display = "none";
+                }
+            }
+           
+    }
+}
+document.getElementById("search").onkeyup = myFunction;
+</script>
+    </body>
+    </html>

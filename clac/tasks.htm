@@ -1,0 +1,328 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+.content1{
+    display: flex;
+    margin: 80px;
+   justify-content: center;
+   
+}
+
+h1{
+text-align: center;
+
+font-size: 50px;
+}
+
+
+.img1{
+    margin-right:50px;
+
+    width: 100px;
+    text-align: center;
+    padding: 30px;
+}
+
+
+.img2{
+    margin-right:50px;
+
+    width: 200px;
+    text-align: center;
+    padding: 30px;
+
+}
+
+
+.img3{
+    margin-right:50px;
+
+    width: 100px;
+    text-align: center;
+    padding: 30px;
+}
+
+.content2{
+    
+   
+}
+.content3{
+    text-align: center;
+    margin: 80px;
+   color: rgb(145, 93, 193);
+}
+
+.img5{
+   display: flex;
+ margin-left: 100px;
+  display: none;
+    
+}
+
+.img6{
+    margin: 50px;
+    display: flex;
+    display: none;
+}
+
+.img7{
+    margin: 50px;
+    display: flex;
+    display: none;
+}
+.piece{
+    display: flex;
+    justify-content: space-between;
+}
+
+.piece2{
+    display: flex;
+   gap: 80px;
+}
+
+.piece3{
+    display: flex;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+  <h1>Store</h1>  
+
+
+   <div id="content1" class="content1">
+
+
+<div class="img1">
+<img src="iphone.png">
+<p>iPhone 13 Pro Max</p>
+<p>700$</p>
+<button onclick="img5()" type="button" class="btn btn-secondary">Bay</button>
+</div>
+
+
+<div class="img2">
+<img src="headset.png"> 
+<p>headphones</p>
+<p>150$</p>
+<button onclick="img6()" type="button" class="btn btn-secondary">Bay</button>
+</div>
+
+
+
+<div class="img3">
+<img src="keboard.jpg">
+<p>Keyboard</p>
+<p>50$</p>
+<button onclick="img7()" type="button" class="btn btn-secondary">Bay</button>
+</div>
+
+   </div>
+    
+
+
+
+<div id="content2" class="content2">
+
+<!-- -------- -->
+
+<div id="img5" class="img5">
+
+<div><img src="iphone.png"> </div>
+
+<div class="piece">
+    <button onclick=" piecePhon()">+</button>
+     <p id="piece">0</p>
+     <button onclick="piecePhon2()">-</button>
+</div>
+
+<div class="Price">
+    <p><span id="Price" >0</span> $</p>
+</div>
+
+<div class="button">
+    <button onclick=" img8()">x</button>
+</div>
+
+</div>
+
+
+
+<!-- ----------- -->
+
+
+
+<div id="img6" class="img6">
+
+
+    <div><img src="headset.png"> </div>
+    
+    <div class="piece2">
+    <button onclick="pieceHeadphones()">+</button>
+    <p  id="piece2">0</p>
+    <button onclick="pieceHeadphones2()">-</button>
+    </div>
+
+    <div class="Price2">
+        <p><span id="Price2" >0</span> $</p>
+    </div>
+    
+    <div class="button2">
+        <button onclick=" img9()">x</button>
+    </div>
+
+
+    
+</div>
+
+
+
+<!-- --------------- -->
+
+
+<div id="img7" class="img7">
+
+    <div> <img src="keboard.jpg"> </div>
+
+    <div class="piece3">
+    <button onclick="piecKeyboard()">+</button>
+    <p  id="piece3">0</p>
+    <button onclick="piecKeyboard2()">-</button>
+    </div>
+    
+    <div class="Price3">
+        <p><span id="Price3" >0</span> $</p>
+    </div>
+    
+    <div class="button3" >
+        <button onclick="img10()" >x</button>
+    </div>
+
+
+</div>
+
+
+
+<!-- ---------------- -->
+</div>
+
+
+<div id="content3" class="content3">
+<h2>Total</h2>
+<h4> d</h4>
+</div>
+<!-- ------------ -->
+
+<script>
+
+function img5(){
+    document.getElementById("img5").style.display = "flex"
+}
+
+
+function img6(){
+    document.getElementById("img6").style.display = "flex"
+}
+
+function img7(){
+    document.getElementById("img7").style.display = "flex"
+}
+// --------
+function img8(){
+    document.getElementById("img5").style.display ="none";
+    document.getElementById("piece").textContent = "0"
+    document.getElementById("Price").textContent = "0"
+}
+
+function img9(){
+    document.getElementById("img6").style.display ="none"
+    document.getElementById("piece2").textContent = "0";
+    document.getElementById("Price2").textContent = "0";
+}
+
+function img10(){
+    document.getElementById("img7").style.display = "none"
+    document.getElementById("piece3").textContent = "0";
+    document.getElementById("Price3").textContent = "0";
+}
+// -------
+function piecePhon(){
+numphone = parseInt(document.getElementById("piece").textContent);
+numphone += 1
+document.getElementById("piece").textContent = numphone;
+document.getElementById("piece").textContent = numphone;
+ document.getElementById("Price").textContent = (700 * numphone)
+
+}
+
+function piecePhon2(){
+numphone = parseInt(document.getElementById("piece").textContent);
+numphone -= 1
+document.getElementById("piece").textContent = numphone;
+ document.getElementById("Price").textContent = (700 * numphone)
+
+if(numphone<=0){
+numphone = parseInt(document.getElementById("piece").textContent);
+numphone = 0
+document.getElementById("piece").textContent = numphone;
+
+}
+}
+// -----------
+function pieceHeadphones(){
+    namhead = parseInt(document.getElementById("piece2").textContent)
+    namhead  +=1
+    document.getElementById("piece2").textContent = namhead;
+    document.getElementById("Price2").textContent = (150 * namhead)
+}
+
+
+function  pieceHeadphones2(){
+    namhead = parseInt(document.getElementById("piece2").textContent)
+    namhead  -=1
+    document.getElementById("piece2").textContent = namhead;
+    document.getElementById("Price2").textContent = (150 * namhead)
+
+    if(namhead<0){
+        namhead = parseInt(document.getElementById("piece2").textContent)
+    namhead =0
+    document.getElementById("piece2").textContent = namhead;
+    }
+}
+// ----------------
+
+function piecKeyboard(){
+    namkey = parseInt(document.getElementById("piece3").textContent)
+    namkey +=1
+    document.getElementById("piece3").textContent = namkey;
+    document.getElementById("Price3").textContent = (50 * namkey)
+}
+
+
+function piecKeyboard2(){
+    namkey = parseInt(document.getElementById("piece3").textContent)
+    namkey -=1
+    document.getElementById("piece3").textContent = namkey;
+    document.getElementById("Price3") .textContent =(50 * namkey)
+
+
+    if(namkey<0){
+        namkey = parseInt(document.getElementById("piece3").textContent)
+    namkey = 0
+    document.getElementById("piece3").textContent = namkey;
+    }
+}
+</script>
+</body>
+</html>

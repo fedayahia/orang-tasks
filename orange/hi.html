@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>Welcome <span id="usernameDisplay"></span></h1>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let email =  sessionStorage.getItem("email");
+
+        if (email) {
+            let match = email.match(/^([^@]+)/); 
+            let username = match ? match[1] : ""; 
+            document.getElementById("usernameDisplay").textContent = username;
+        }
+    });
+</script>
+</body>
+</html>

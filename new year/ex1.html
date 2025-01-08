@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>To do list</h1>
+    <form>
+        <input type="text" id="todoTextInput" size="40" placeholder="Add your tasks">
+        <input type="button" id="addButton" value="Add task">
+    </form>
+    <ul id="playlist"></ul>
+
+
+    <script>
+         function add() {
+        let input = document.getElementById("todoTextInput").value;
+        let listNode = document.getElementById("playlist");
+        if(input){
+            const liNode = document.createElement("li");
+            liNode.textContent = input; 
+
+            const deleteButton = document.createElement("button"); 
+                deleteButton.textContent = "Delete"; 
+                deleteButton.addEventListener("click", function() {
+                    listNode.removeChild(liNode); 
+                });
+                liNode.appendChild(deleteButton);
+            listNode.appendChild(liNode);
+
+
+            document.getElementById("todoTextInput").value = "";
+
+            
+            
+
+        }
+    }
+         
+        document.addEventListener("DOMContentLoaded", function() {
+            const addButton = document.getElementById("addButton");
+            addButton.addEventListener("click", add);   
+        });
+    </script>
+</body>
+</html>
