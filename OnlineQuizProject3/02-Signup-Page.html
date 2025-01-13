@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - QuizAce</title>
+    <meta
+      name="description"
+      content="Join QuizAce to test your knowledge with exciting quizzes on various topics."
+    />
+    <link rel="stylesheet" href="02-Signup-Page.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button id="burger-menu-btn" aria-label="Open menu">☰</button>
+        <p class="navbar-title">QuizAce</p>
+        <div class="nav-right">
+          <button id="login-btn">Login</button>
+        </div>
+      </nav>
+    </header>
+    <main id="signup-main">
+      <h1 class="signup-heading">Create an Account</h1>
+      <section id="signup-section">
+        <div class="signup-form-container">
+          <form id="signup-form">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Only letters and numbers"
+              required
+            />
+            <small class="validation-message" id="username-validation"></small>
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter a valid email"
+              required
+            />
+            <small class="validation-message" id="email-validation"></small>
+
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Min 8 chars (letters, numbers, special)"
+              required
+            />
+            <small class="validation-message" id="password-validation"></small>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              placeholder="Must match the password"
+              required
+            />
+            <small
+              class="validation-message"
+              id="confirm-password-validation"
+            ></small>
+
+            <button type="submit" id="join-now-btn" disabled>Join Now</button>
+          </form>
+          <p style="margin-bottom: 0">
+            Already have an account? <a href="03-Login-Page.html">Log In</a>
+          </p>
+        </div>
+        <img src="./images/image.png" alt="Sign Up Image" />
+      </section>
+      <aside id="sidebar">
+        <ul>
+          <li><a href="01-Welcome-Page.html">Home</a></li>
+          <li class="mobile-only"><a href="03-Login-Page.html">Login</a></li>
+        </ul>
+      </aside>
+    </main>
+    <script src="02-Signup-Page.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to QuizAce</title>
+    <meta
+      name="description"
+      content="Join QuizAce to test your knowledge with exciting quizzes on various topics."
+    />
+    <link rel="stylesheet" href="01-Welcome-Page.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button id="burger-menu-btn" aria-label="Open menu">☰</button>
+        <p class="navbar-title">QuizAce</p>
+        <div class="nav-right">
+          <button id="signup-btn">Sign Up</button>
+          <button id="login-btn">Login</button>
+        </div>
+      </nav>
+    </header>
+    <main id="welcome-main">
+      <section id="welcome-section">
+        <div class="welcome-text">
+          <h1>Welcome to QuizAce!</h1>
+          <p class="welcome-text-paras">
+            We're thrilled to have you join our exciting world of quizzes!
+          </p>
+          <p class="welcome-text-paras">
+            Each quiz typically takes about 5 minutes to complete, allowing you
+            to quickly gauge your expertise across various topics.
+          </p>
+          <button id="start-quiz-btn">Let's begin your quiz journey</button>
+        </div>
+        <img src="./images/image.png" alt="Welcome Image" />
+      </section>
+      <section id="resources-section">
+        <h2>
+          <b>Unlock More Knowledge:</b> Explore Related Topics and Resources
+        </h2>
+        <div class="resource-boxes">
+          <div class="resource-box" id="resource1"></div>
+          <div class="resource-box" id="resource2"></div>
+          <div class="resource-box" id="resource3"></div>
+        </div>
+      </section>
+      <aside id="sidebar">
+        <ul>
+          <li class="mobile-only"><a href="02-Signup-Page.html">Sign Up</a></li>
+          <li class="mobile-only"><a href="03-Login-Page.html">Login</a></li>
+        </ul>
+      </aside>
+    </main>
+    <script src="01-Welcome-Page.min.js"></script>
+  </body>
+</html>

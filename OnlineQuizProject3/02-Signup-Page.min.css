@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --nav-bar-color: #9bd3d3;
+  --primary-color: #4caf50;
+  --secondary-color: #f0f0f0;
+  --text-color: #333;
+  --hover-color: #e0e0e0;
+  --error-color: #ff0000;
+}
+
+body {
+  font-family: Poppins, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--nav-bar-color);
+  color: black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.navbar-title {
+  font-weight: bold;
+  font-size: x-large;
+  margin: 0 auto;
+  padding-left: 50px;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+  padding-right: 30px;
+}
+
+.nav-right button {
+  background-color: #d8d8d8;
+  color: black;
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#burger-menu-btn {
+  font-size: 24px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px; /* Adjust for fixed navbar height */
+}
+
+#sidebar {
+  position: fixed;
+  top: 55px;
+  left: -250px;
+  width: 200px;
+  height: 100%;
+  background-color: #333333d5;
+  color: white;
+  transition: left 0.3s;
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+#sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    margin-right: 9%;
+  }
+}
+@media (max-width: 730px) {
+  nav {
+    margin-right: 10%;
+  }
+}
+@media (max-width: 660px) {
+  nav {
+    margin-right: 11%;
+  }
+}
+@media (max-width: 590px) {
+  nav {
+    margin-right: 12%;
+  }
+}
+@media (max-width: 520px) {
+  nav {
+    margin-right: 13%;
+  }
+}
+@media (max-width: 450px) {
+  nav {
+    margin-right: 14%;
+  }
+}
+@media (max-width: 400px) {
+  nav {
+    margin-right: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-right {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .navbar-title {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 450px) {
+  body {
+    zoom: 1.1;
+  }
+}
+
+/* ################ */
+/* specificspecific */
+#signup-section {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  justify-content: center;
+  width: 80%;
+  height: 70vh;
+  margin-top: 20px;
+  gap: 50px;
+}
+
+.signup-heading {
+  padding-top: 50px;
+}
+
+.signup-form-container {
+  text-align: center;
+  min-width: 30vw;
+}
+
+#signup-section img {
+  min-width: 30vw;
+}
+
+.signup-form-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.signup-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.signup-form-container label {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.signup-form-container input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.validation-message {
+  font-size: 0.8rem;
+  color: var(--error-color);
+  text-align: left;
+}
+
+#join-now-btn {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#join-now-btn:disabled {
+  background-color: gray;
+  margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+  .signup-form-container {
+    max-width: 60%;
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  #signup-section {
+    flex-direction: column;
+    text-align: center;
+    justify-content: start;
+    gap: 90px;
+  }
+
+  #signup-section img {
+    /* max-width: 100%;
+    max-height: 60%; */
+    display: none;
+  }
+
+  .signup-form-container {
+    max-width: 100%;
+  }
+
+  .signup-form-container h1 {
+    font-size: 1.3rem;
+  }
+
+  #join-now-btn {
+    font-size: 1.3rem;
+  }
+}

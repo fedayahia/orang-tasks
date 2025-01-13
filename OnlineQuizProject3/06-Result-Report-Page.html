@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result: Report Page</title>
+    <meta
+      name="description"
+      content="View your quiz results and performance report."
+    />
+    <link rel="stylesheet" href="06-Result-Report-Page.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button id="burger-menu-btn" aria-label="Open menu">☰</button>
+        <span
+          id="username"
+          class="hide-on-small-screens"
+          style="visibility: hidden"
+        ></span>
+        <p class="navbar-title">QuizAce: Results</p>
+        <div class="nav-right">
+          <span id="username" class="hide-on-small-screens"></span>
+          <img
+            src="./images/profile.png"
+            alt="Profile Photo"
+            id="profile-photo"
+          />
+          <div class="dropdown-menu" id="dropdown-menu">
+            <a href="01-Welcome-Page.html#resources-section" id="logout-link"
+              >Log Out</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="result-main">
+      <section id="result-section">
+        <div class="result-container">
+          <div class="left-half">
+            <h1 id="msg-1"></h1>
+            <p id="msg-2"></p>
+            <p>Your Score: <span id="total-score"></span></p>
+            <button id="view-answers-btn">View Answers</button>
+            <button id="new-quiz-btn">Start New Quiz</button>
+          </div>
+          <div class="right-half">
+            <div
+              class="circular-progress"
+              data-inner-circle-color="lightgrey"
+              data-percentage="80"
+              data-progress-color="crimson"
+              data-bg-color="black"
+            >
+              <div class="inner-circle"></div>
+              <p class="percentage">0%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <aside id="sidebar">
+        <ul>
+          <li><a href="01-Welcome-Page.html">Home</a></li>
+        </ul>
+      </aside>
+    </main>
+    <script src="06-Result-Report-Page.min.js"></script>
+  </body>
+</html>

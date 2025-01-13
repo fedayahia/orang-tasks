@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Quiz Page</title>
+    <meta name="description" content="Select a topic to start your quiz" />
+    <link rel="stylesheet" href="04-Quiz-Select-Topic.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button id="burger-menu-btn" aria-label="Open menu">☰</button>
+        <span
+          id="username"
+          class="hide-on-small-screens"
+          style="visibility: hidden"
+          >Username</span
+        >
+        <p class="navbar-title">
+          QuizAce<span class="hide-on-shrink">: Select a Topic</span>
+        </p>
+        <div class="nav-right">
+          <span id="username" class="hide-on-small-screens">Username</span>
+          <img
+            src="./images/profile.png"
+            alt="Profile Photo"
+            id="profile-photo"
+          />
+          <div class="dropdown-menu" id="dropdown-menu">
+            <a href="01-Welcome-Page.html#resources-section" id="logout-link"
+              >Log Out</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="select-main">
+      <section id="select-welcome-section">
+        <div class="select-welcome-text">
+          <h1>Welcome, <span class="welcome-msg-username">Username</span>!</h1>
+          <p class="select-welcome-text-paras">
+            Each quiz typically takes about 5 minutes to complete, allowing you
+            to quickly gauge your expertise across various topics.
+          </p>
+          <div class="select-container">
+            <select id="select-topic">
+              <option value="" disabled selected>Select a topic</option>
+            </select>
+          </div>
+          <button id="select-start-quiz-btn" disabled>Start Quiz Now</button>
+        </div>
+        <img src="./images/image.png" alt="Welcome Image" />
+      </section>
+      <aside id="sidebar">
+        <ul>
+          <li><a href="01-Welcome-Page.html">Home</a></li>
+          <li class="mobile-only">
+            <a href="01-Welcome-Page.html">Log Out</a>
+          </li>
+          <!-- <li><a href="#">Focus Mode</a></li> -->
+        </ul>
+      </aside>
+    </main>
+    <script src="04-Quiz-Select-Topic.min.js"></script>
+  </body>
+</html>

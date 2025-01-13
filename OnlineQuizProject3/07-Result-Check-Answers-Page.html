@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result: Check Answers</title>
+    <meta
+      name="description"
+      content="Check your answers and see how well you did on the quiz."
+    />
+    <link rel="stylesheet" href="07-Result-Check-Answers-Page.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button id="burger-menu-btn" aria-label="Open menu">☰</button>
+        <span
+          id="username"
+          class="hide-on-small-screens"
+          style="visibility: hidden"
+        ></span>
+        <p class="navbar-title">QuizAce: Results</p>
+        <div class="nav-right">
+          <span id="username" class="hide-on-small-screens"></span>
+          <img
+            src="./images/profile.png"
+            alt="Profile Photo"
+            id="profile-photo"
+          />
+          <div class="dropdown-menu" id="dropdown-menu">
+            <a href="01-Welcome-Page.html#resources-section" id="logout-link"
+              >Log Out</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="quiz-section">
+        <div class="quiz-container">
+          <div class="question-nav">
+            <a class="question-box" href="#"></a>
+            <a class="question-box" href="#"></a>
+            <a class="question-box" href="#"></a>
+            <a class="question-box" href="#"></a>
+          </div>
+          <div class="question-container">
+            <h2 class="question-number">
+              Question <span class="qs-num"></span>:
+            </h2>
+            <p class="question-text"></p>
+          </div>
+          <div class="answers-container">
+            <div class="answer-option correct-answer">
+              <span class="answer-circle"></span>
+              <span class="answer-text"></span>
+            </div>
+            <div class="answer-option user-answer">
+              <span class="answer-circle"></span>
+              <span class="answer-text"></span>
+            </div>
+            <div class="answer-option">
+              <span class="answer-circle"></span>
+              <span class="answer-text"></span>
+            </div>
+            <div class="answer-option">
+              <span class="answer-circle"></span>
+              <span class="answer-text"></span>
+            </div>
+          </div>
+          <button id="new-quiz-btn">Start New Quiz</button>
+        </div>
+      </section>
+      <aside id="sidebar">
+        <ul>
+          <li><a href="#">Home</a></li>
+        </ul>
+      </aside>
+    </main>
+    <script src="07-Result-Check-Answers-Page.min.js"></script>
+  </body>
+</html>
