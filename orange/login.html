@@ -76,26 +76,40 @@
         </div>
     </div>
     <script>
-        const form = document.getElementById("form");
-    
-        form.onsubmit = function (event) {
-            event.preventDefault();
-    
-            let email = localStorage.getItem("email");
-            let pass = localStorage.getItem("password1");
-            let name = localStorage.getItem("name");
-            let emailInput = document.getElementById("email").value;
-            let passwordInput = document.getElementById("password").value;
-    
-            if (emailInput === email && passwordInput === pass) {
-                sessionStorage.setItem("email", emailInput);
-                window.location.href = "hi.html";
-            } else {
-               let alertMessage = document.getElementById("alert");
-               alertMessage.textContent = "Invalid email or password. Please try again.";
-               alertMessage.style.color = "red";
-            }
-        };
+    const form = document.getElementById("form");
+
+form.onsubmit = function (event) {
+    event.preventDefault();
+
+    // جلب البيانات من localStorage
+    let email = localStorage.getItem("email");
+    let pass = localStorage.getItem("password1");
+    let name = localStorage.getItem("name");
+
+    // جلب المدخلات من الفورم
+    let emailInput = document.getElementById("email").value;
+    let passwordInput = document.getElementById("password").value;
+
+    // تحقق من وجود البيانات في localStorage
+    if (!email || !pass) {
+        let alertMessage = document.getElementById("alert");
+        alertMessage.textContent = "No user data found, please register first.";
+        alertMessage.style.color = "red";
+        return;
+    }
+
+    // تحقق من المدخلات ومقارنتها مع البيانات المخزنة
+    if (emailInput === email && passwordInput === pass) {
+        sessionStorage.setItem("email", emailInput); // حفظ البيانات في sessionStorage
+        window.location.href = "hi.html"; // الانتقال إلى صفحة المستخدم
+    } else {
+        // في حال كانت المدخلات غير صحيحة
+        let alertMessage = document.getElementById("alert");
+        alertMessage.textContent = "Invalid email or password. Please try again.";
+        alertMessage.style.color = "red";
+    }
+};
+
     </script>
    
 </body>
